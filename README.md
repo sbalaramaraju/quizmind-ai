@@ -35,6 +35,8 @@ In the project root, run:
 ```bash
 docker-compose up -d
 ```
+> Skip this step and use your cloud Redis URL in `REDIS_URL` if you are using a managed Redis provider (e.g., Upstash).
+
 
 ### 2. Backend Setup
 ```bash
@@ -44,7 +46,7 @@ npm install
 Create a `.env` file in the `backend` directory:
 ```env
 API_KEY=your_gemini_api_key_here
-REDIS_URL=redis://localhost:6379
+REDIS_URL=redis://localhost:6379  # or use your Upstash Redis URL
 ```
 Run the server:
 ```bash
